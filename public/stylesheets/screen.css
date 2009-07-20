@@ -1,0 +1,45 @@
+#navigation li {
+  display: inline-block;
+  list-style: none;
+  padding: 10px;
+  background: #CCC;
+}
+
+
+.tags {
+  background: #EEE;
+  padding: 20px;
+}
+
+.tags li {
+  display: inline-block;
+  list-style: none;
+}
+
+.tags .size-1 {
+  font-size: 1.0em;
+}
+
+.tags .size-2 {
+  font-size: 1.2em;
+}
+
+.tags .size-3 {
+  font-size: 1.3em;
+}
+
+.tags .size-4 {
+  font-size: 1.4em;
+}
+
+.tags .size-5 {
+  font-size: 1.5em;
+}
+
+.tags .size-6 {
+  font-size: 1.6em;
+}
+
+.tags .size-7 {
+  font-size: 1.7em;
+}
