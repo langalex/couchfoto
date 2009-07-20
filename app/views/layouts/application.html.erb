@@ -6,7 +6,8 @@
   <body>
     <ul id="navigation">
       <li><%= link_to 'New Photo', new_photo_path %></li>
-      <li><%= link_to 'Tag Cloud', photos_path %></li>
+      <li><%= link_to 'All Photos', photos_path %></li>
+      <li><%= link_to 'Tag Cloud', tags_photos_path %></li>
     </ul>
     <hr/>
     <div id="main"><%= yield %></div>

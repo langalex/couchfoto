@@ -1,5 +1,7 @@
-<ul class="tags">
-  <%- @tags.each do |tag| -%>
-    <li class="size-<%= tag.count %>"><%= tag.name %></li>
+<h1>All Photos</h1>
+
+<ul>
+  <%- @photos.each do |photo| -%>
+    <li><%= link_to h(photo.title), photo %></li>
   <%- end -%>
 </ul>

@@ -3,6 +3,7 @@ class Photo
   
   class Tag < Struct.new(:name, :count); end
   
+  view :by_title, key: :title
   view :tag_cloud, type: :raw, map: 'function(doc) {if(doc.ruby_class == \'Photo\' && doc.tags) {doc.tags.forEach(function(tag) {emit(tag, 1)})}}', reduce: 'function(keys, values) {return(sum(values))}', group: true, results_filter: lambda{|rows| rows['rows'].map{|row| Tag.new(row['key'], row['value'])}}
   
   property :tags

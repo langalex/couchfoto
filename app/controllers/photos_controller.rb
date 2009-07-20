@@ -1,6 +1,10 @@
 class PhotosController < ApplicationController
   
   def index
+    @photos = db.view(Photo.by_title)
+  end
+  
+  def tags
     @tags = db.view(Photo.tag_cloud)
   end
   

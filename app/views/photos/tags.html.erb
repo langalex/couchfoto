@@ -1,0 +1,7 @@
+<h1>Tag Cloud</h1>
+
+<ul class="tags">
+  <%- @tags.each do |tag| -%>
+    <li class="size-<%= tag.count %>"><%= tag.name %></li>
+  <%- end -%>
+</ul>
