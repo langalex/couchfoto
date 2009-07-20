@@ -1,0 +1,15 @@
+<h1>Upload Photo</h1>
+
+<%- form_for(@photo) do |f| -%>
+  <p>
+    <%= f.label :title, 'Title' %>
+    <%= f.text_field :title %>
+  </p>
+  
+  <p>
+    <%= f.label :tags, 'Tags' %>
+    <%= f.text_field :tags_string %> (separated by whitespace)
+  </p>
+  
+  <p><%= f.submit 'Upload Photo' %></p>
+<%- end -%>
