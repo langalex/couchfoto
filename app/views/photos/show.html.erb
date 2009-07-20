@@ -1,5 +1,7 @@
 <h1><%= h @photo.title %></h1>
 
+<%= image_tag @photo.public_url %>
+
 <h2>Tags</h2>
 <%- @photo.tags.each do |tag| %>
   <li><%= h tag %></li>

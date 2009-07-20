@@ -9,11 +9,24 @@ class Photo
   property :tags
   property :title
   
-  validates_presence_of :title
+  validates_presence_of :title, :file
   
-  attr_accessor :tags_string
+  attr_accessor :tags_string, :file
   
   before_create :extract_tags
+  
+  def public_url
+    "#{CouchPotato.full_url_to_database}/#{_id}/file"
+  end
+  
+  def to_hash
+    if file
+      super.merge('_attachments' => {'file' => {'data' => File.read(file.path)}})
+    else
+      super
+    end
+    
+  end
   
   private
   

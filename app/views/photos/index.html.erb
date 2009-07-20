@@ -2,6 +2,9 @@
 
 <ul>
   <%- @photos.each do |photo| -%>
-    <li><%= link_to h(photo.title), photo %></li>
+    <li>
+      <%= image_tag photo.public_url, width: 100 %>
+      <%= link_to h(photo.title), photo %>
+    </li>
   <%- end -%>
 </ul>

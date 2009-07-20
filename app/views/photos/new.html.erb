@@ -1,6 +1,6 @@
 <h1>Upload Photo</h1>
 
-<%- form_for(@photo) do |f| -%>
+<%- form_for(@photo, html: {multipart: true}) do |f| -%>
   <%= f.error_messages %>
   <p>
     <%= f.label :title, 'Title' %>
@@ -10,6 +10,11 @@
   <p>
     <%= f.label :tags, 'Tags' %>
     <%= f.text_field :tags_string %> (separated by whitespace)
+  </p>
+  
+  <p>
+    <%= f.label :file, 'File' %>
+    <%= f.file_field :file %>
   </p>
   
   <p><%= f.submit 'Upload Photo' %></p>
